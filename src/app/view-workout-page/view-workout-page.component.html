@@ -1,1 +1,9 @@
-<p>view-workout-page works!</p>
+<mat-form-field appearance="fill">
+  <mat-label>View Workout</mat-label>
+  <mat-select [(value)]="selected" (selectionChange)="switchWorkout(selected)">
+    <mat-option *ngFor="let workout of workouts" [value]="workout.value">
+      {{workout.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<app-workout-view [workout]="workout"></app-workout-view>

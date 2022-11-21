@@ -1,0 +1,7 @@
+table {
+  width: 100%;
+}
+
+.mat-column-index {
+  max-width: 3rem;
+}

@@ -17,12 +17,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
 import { NavListComponent } from './nav-list/nav-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ViewWorkoutPageComponent } from './view-workout-page/view-workout-page.component';
 import { CreateNewPageComponent } from './create-new-page/create-new-page.component';
 import { WorkoutParamsComponent } from './workout-params/workout-params.component';
-import { ExerciseListComponent } from './exercise-list/exercise-list.component'
+import { ExerciseListComponent } from './exercise-list/exercise-list.component';
+import { WorkoutViewComponent } from './workout-view/workout-view.component';
+import { WorkoutTableComponent } from './workout-table/workout-table.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component'
     ViewWorkoutPageComponent,
     CreateNewPageComponent,
     WorkoutParamsComponent,
-    ExerciseListComponent
+    ExerciseListComponent,
+    WorkoutViewComponent,
+    WorkoutTableComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component'
     MatExpansionModule,
     MatTableModule,
     MatSortModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
