@@ -15,7 +15,7 @@ export class ExerciseListComponent implements OnInit, AfterViewInit {
 
   initialSelection = [];
   allowMultiSelect = true;
-  selection = new SelectionModel<Exercise>(this.allowMultiSelect, this.initialSelection);
+  @Input() selection: SelectionModel<Exercise> = new SelectionModel<Exercise>(this.allowMultiSelect, this.initialSelection);
 
   displayedColumns: string[] = ['select', 'name', 'equipment'];
   dataSource: any = undefined;
@@ -23,6 +23,7 @@ export class ExerciseListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
   }
+
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.exercises);
     // select all by default

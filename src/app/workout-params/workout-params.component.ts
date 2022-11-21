@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Exercise } from '../types';
+import { SelectionModel } from '@angular/cdk/collections';
 import exercisesInput from "../../data/exercises.json";
 
 @Component({
@@ -9,4 +11,7 @@ import exercisesInput from "../../data/exercises.json";
 export class WorkoutParamsComponent {
   exerciseList = exercisesInput;
 
+  initialSelection = [];
+  allowMultiSelect = true;
+  selection = new SelectionModel<Exercise>(this.allowMultiSelect, this.initialSelection);
 }
