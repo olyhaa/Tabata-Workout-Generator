@@ -1,0 +1,386 @@
+[
+  {
+    "name": "One leg deadlift",
+    "leftAndRight": true
+  },
+  {
+    "name": "Russian Twist"
+  },
+  {
+    "name": "Deadbug"
+  },
+  {
+    "name": "Squat Push Press"
+  },
+  {
+    "name": "Bicep Curl Circles"
+  },
+  {
+    "name": "Squat and Reach"
+  },
+  {
+    "name": "Pushup Rotation"
+  },
+  {
+    "name": "V-Sit Crunch"
+  },
+  {
+    "name": "Bicycle Crunches"
+  },
+  {
+    "name": "Reverse Crunch"
+  },
+  {
+    "name": "Pilates Crunch"
+  },
+  {
+    "name": "Plank"
+  },
+  {
+    "name": "Flutter Kick"
+  },
+  {
+    "name": "Oblique V-Up"
+  },
+  {
+    "name": "Superman"
+  },
+  {
+    "name": "Straight Leg Situp"
+  },
+  {
+    "name": "Leg Raises"
+  },
+  {
+    "name": "Slow Crunch"
+  },
+  {
+    "name": "Standing Row with Tricep Kickback"
+  },
+  {
+    "name": "Chest Press with Crunch"
+  },
+  {
+    "name": "V-Sit with Shoulder Press"
+  },
+  {
+    "name": "Straight Arm Situp"
+  },
+  {
+    "name": "Shoulder Press"
+  },
+  {
+    "name": "Deadlift Row"
+  },
+  {
+    "name": "Chest Fly Crunch"
+  },
+  {
+    "name": "Bird-Dog",
+    "leftAndRight": true
+  },
+  {
+    "name": "Leg Raises"
+  },
+  {
+    "name": "Leg Scissors"
+  },
+  {
+    "name": "Hollow Body Holds"
+  },
+  {
+    "name": "Squat",
+    "equipment": [
+      "mini-band"
+    ]
+  },
+  {
+    "name": "Squat Pulses",
+    "equipment": [
+      "mini-band"
+    ]
+  },
+  {
+    "name": "Squat Clamshells",
+    "equipment": [
+      "mini-band"
+    ]
+  },
+  {
+    "name": "Donkey Kicks",
+    "equipment": [
+      "mini-band"
+    ],
+    "leftAndRight": true
+  },
+  {
+    "name": "Rainbows",
+    "equipment": [
+      "mini-band"
+    ],
+    "leftAndRight": true
+  },
+  {
+    "name": "Fire Hydrants",
+    "equipment": [
+      "mini-band"
+    ],
+    "leftAndRight": true
+  },
+  {
+    "name": "Glute Bridge",
+    "equipment": [
+      "mini-band"
+    ]
+  },
+  {
+    "name": "Glute Bridge Pulses",
+    "equipment": [
+      "mini-band"
+    ]
+  },
+  {
+    "name": "Glute Bridge Clamshells",
+    "equipment": [
+      "mini-band"
+    ]
+  },
+  {
+    "name": "Forearm Plank with Shoulder Taps"
+  },
+  {
+    "name": "Glute Bridge March"
+  },
+  {
+    "name": "Mountain Climbers"
+  },
+  {
+    "name": "Half Get-Up",
+    "leftAndRight": true
+  },
+  {
+    "name": "Pushups"
+  },
+  {
+    "name": "Squats",
+    "equipment": [
+      "TRX",
+      "bosu"
+    ]
+  },
+  {
+    "name": "Step-Ups"
+  },
+  {
+    "name": "Flutter Forearm Planks"
+  },
+  {
+    "name": "Hamstring Curls",
+    "equipment": [
+      "ball"
+    ]
+  },
+  {
+    "name": "Rollouts",
+    "equipment": [
+      "ball"
+    ]
+  },
+  {
+    "name": "Leg Pass",
+    "equipment": [
+      "ball"
+    ]
+  },
+  {
+    "name": "Side Plank",
+    "leftAndRight": true
+  },
+  {
+    "name": "In-Place Bear Crawl"
+  },
+  {
+    "name": "Pavlov Press",
+    "equipment": [
+      "resistance-band"
+    ],
+    "leftAndRight": true
+  },
+  {
+    "name": "Bottoms-Up Lunge Initiation",
+    "leftAndRight": true
+  },
+  {
+    "name": "Static Walking Plank"
+  },
+  {
+    "name": "Body Saw",
+    "equipment": [
+      "roller"
+    ]
+  },
+  {
+    "name": "High Plank"
+  },
+  {
+    "name": "High Plank with Dumbell Drag"
+  },
+  {
+    "name": "Side Plank",
+    "leftAndRight": true
+  },
+  {
+    "name": "Russian Anti-Twist",
+    "leftAndRight": true
+  },
+  {
+    "name": "Kneeling Half-Windmill",
+    "leftAndRight": true
+  },
+  {
+    "name": "Bear Sit Through"
+  },
+  {
+    "name": "Stir the pot",
+    "leftAndRight": true,
+    "equipment": [
+      "ball"
+    ]
+  },
+  {
+    "name": "Jumprope"
+  },
+  {
+    "name": "Hight to low plank"
+  },
+  {
+    "name": "Rotating Planks"
+  },
+  {
+    "name": "Toe Taps"
+  },
+  {
+    "name": "Renegade Rows"
+  },
+  {
+    "name": "Walkouts"
+  },
+  {
+    "name": "Burpees"
+  },
+  {
+    "name": "Reverse Lunges"
+  },
+  {
+    "name": "Floor Chest Press"
+  },
+  {
+    "name": "Heismans"
+  },
+  {
+    "name": "Chest Press",
+    "equipment": [
+      "TRX"
+    ]
+  },
+  {
+    "name": "Row",
+    "equipment": [
+      "TRX"
+    ]
+  },
+  {
+    "name": "One-Arm Row",
+    "leftAndRight": true,
+    "equipment": [
+      "TRX"
+    ]
+  },
+  {
+    "name": "Split Squat",
+    "leftAndRight": true,
+    "equipment": [
+      "TRX"
+    ]
+  },
+  {
+    "name": "L-Sit with Overhead Press"
+  },
+  {
+    "name": "One-leg chops",
+    "leftAndRight": true,
+    "equipment": [
+      "medicine-ball"
+    ]
+  },
+  {
+    "name": "Deadlift"
+  },
+  {
+    "name": "Kneeling Press"
+  },
+  {
+    "name": "Pullup",
+    "equipment": [
+      "TRX"
+    ]
+  },
+  {
+    "name": "Medicine Ball Slams",
+    "equipment": [
+      "medicine-ball"
+    ]
+  },
+  {
+    "name": "One leg glute bridge with one arm press",
+    "leftAndRight": true
+  },
+  {
+    "name": "Y W T",
+    "equipment": [
+      "TRX"
+    ]
+  },
+  {
+    "name": "Curtsey Lunge"
+  },
+  {
+    "name": "Bosu Walk Overs",
+    "equipment": [
+      "bosu"
+    ]
+  },
+  {
+    "name": "High Knees"
+  },
+  {
+    "name": "Kettlebell Swings"
+  },
+  {
+    "name": "Jumping Jacks"
+  },
+  {
+    "name": "Squat Jacks"
+  },
+  {
+    "name": "Quick Feet"
+  },
+  {
+    "name": "Rollouts",
+    "equipment": [
+      "ball"
+    ]
+  },
+  {
+    "name": "Goblet Squat with Sit and Reach"
+  },
+  {
+    "name": "Plank Jacks"
+  },
+  {
+    "name": "Medicine Ball Jump Bounce",
+    "equipment": [
+      "medicine-ball"
+    ]
+  }
+]

@@ -50,4 +50,15 @@
 
   </mat-expansion-panel>
 
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Available Exercises
+      </mat-panel-title>
+      <mat-panel-description>
+        Modify Defaults
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-exercise-list [exercises]="exerciseList"></app-exercise-list>
+  </mat-expansion-panel>
 </mat-accordion>

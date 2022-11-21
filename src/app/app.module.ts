@@ -13,6 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NavListComponent } from './nav-list/nav-list.component';
@@ -20,6 +22,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ViewWorkoutPageComponent } from './view-workout-page/view-workout-page.component';
 import { CreateNewPageComponent } from './create-new-page/create-new-page.component';
 import { WorkoutParamsComponent } from './workout-params/workout-params.component';
+import { ExerciseListComponent } from './exercise-list/exercise-list.component'
 
 @NgModule({
   declarations: [
@@ -30,6 +33,7 @@ import { WorkoutParamsComponent } from './workout-params/workout-params.componen
     ViewWorkoutPageComponent,
     CreateNewPageComponent,
     WorkoutParamsComponent,
+    ExerciseListComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,8 @@ import { WorkoutParamsComponent } from './workout-params/workout-params.componen
     MatFormFieldModule,
     MatInputModule,
     MatExpansionModule,
+    MatTableModule,
+    MatSortModule,
     MatCheckboxModule
   ],
   providers: [],
