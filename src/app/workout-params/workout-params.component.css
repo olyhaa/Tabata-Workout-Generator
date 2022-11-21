@@ -1,0 +1,22 @@
+.wrapper  {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-form-field {
+flex-direction: row;
+  padding: 1rem;
+}
+
+.fieldSuffix {
+  padding-right: 1rem;
+}
+
+
+.fieldInput {
+  padding: 1rem;
+}
+
+.fieldInput--fullwidth {
+min-width: 100%
+}
