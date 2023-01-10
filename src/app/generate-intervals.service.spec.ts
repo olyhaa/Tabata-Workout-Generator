@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { GenerateIntervalsService } from './generate-intervals.service';
-import { PREPARE_INTERVAL, REST_INTERVAL, WORK_INTERVAL } from './types';
+import { PREPARE_INTERVAL, REST_INTERVAL, WORK_INTERVAL } from './constants';
 
 describe('GenerateIntervalsService', () => {
   let service: GenerateIntervalsService;
