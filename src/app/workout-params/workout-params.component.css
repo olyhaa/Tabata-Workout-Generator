@@ -20,3 +20,7 @@ flex-direction: row;
 .fieldInput--fullwidth {
 min-width: 100%
 }
+
+.generateButton {
+  margin: 1rem 0;
+}

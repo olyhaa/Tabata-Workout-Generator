@@ -1,6 +1,9 @@
 export const GREEN_COLOR = 8;
 
-export const DEFAULT_PREPARE_TIME = 0;
+export const DEFAULT_NUM_SETS = 3;
+export const DEFAULT_NUM_CYCLES = 8;
+
+export const DEFAULT_PREPARE_TIME = 60;
 export const DEFAULT_WORK_TIME = 30;
 export const DEFAULT_REST_TIME = 15;
 

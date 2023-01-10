@@ -41,18 +41,20 @@ export class WorkoutViewComponent {
   extractIntervals(intervals: any[]): Interval[] {
     const newIntervals: Interval[] = [];
 
-    for (let i = 0; i < intervals.length; i++) {
-      const interval = intervals[i];
-      const nextInterval = intervals?.[i + 1];
-      if (interval.type === WORK_INTERVAL) {
-        const restTime = nextInterval?.type === REST_INTERVAL ? nextInterval.time : 0;
-        newIntervals.push({
-          description: interval?.description,
-          work: interval?.time,
-          workTime: this.getTime(interval?.time),
-          rest: restTime,
-          restTime: this.getTime(restTime)
-        });
+    if (intervals) {
+      for (let i = 0; i < intervals.length; i++) {
+        const interval = intervals[i];
+        const nextInterval = intervals?.[i + 1];
+        if (interval.type === WORK_INTERVAL) {
+          const restTime = nextInterval?.type === REST_INTERVAL ? nextInterval.time : 0;
+          newIntervals.push({
+            description: interval?.description,
+            work: interval?.time,
+            workTime: this.getTime(interval?.time),
+            rest: restTime,
+            restTime: this.getTime(restTime)
+          });
+        }
       }
     }
     return newIntervals;

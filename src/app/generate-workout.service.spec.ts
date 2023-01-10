@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { GenerateWorkoutService } from './generate-workout.service';
-import { GREEN_COLOR, PREPARE_INTERVAL, REST_INTERVAL, WORK_INTERVAL } from './types';
+import { GREEN_COLOR, PREPARE_INTERVAL, REST_INTERVAL, WORK_INTERVAL } from './constants';
 
 describe('GenerateWorkoutService', () => {
   let service: GenerateWorkoutService;
