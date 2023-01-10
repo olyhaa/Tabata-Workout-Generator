@@ -1,109 +1,234 @@
 [
   {
     "name": "One leg deadlift",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "back"
+    ]
   },
   {
-    "name": "Russian Twist"
+    "name": "Russian Twist",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Deadbug"
+    "name": "Deadbug",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Squat Push Press"
+    "name": "Squat Push Press",
+    "type": [
+      "lower",
+      "shoulder"
+    ]
   },
   {
-    "name": "Bicep Curl Circles"
+    "name": "Bicep Curl Circles",
+    "type": [
+      "upper"
+    ]
   },
   {
-    "name": "Squat and Reach"
+    "name": "Dumbbell Curls",
+    "type": [
+      "upper"
+    ]
   },
   {
-    "name": "Pushup Rotation"
+    "name": "Hammer Curl",
+    "type": [
+      "upper"
+    ]
   },
   {
-    "name": "V-Sit Crunch"
+    "name": "Squat and Reach",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Bicycle Crunches"
+    "name": "Pushup Rotation",
+    "type": [
+      "chest"
+    ]
   },
   {
-    "name": "Reverse Crunch"
+    "name": "V-Sit Crunch",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Pilates Crunch"
+    "name": "Bicycle Crunches",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Plank"
+    "name": "Reverse Crunch",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Flutter Kick"
+    "name": "Pilates Crunch",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Oblique V-Up"
+    "name": "Plank",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Superman"
+    "name": "Flutter Kick",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Straight Leg Situp"
+    "name": "Oblique V-Up",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Leg Raises"
+    "name": "Superman",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Slow Crunch"
+    "name": "Straight Leg Situp",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Standing Row with Tricep Kickback"
+    "name": "Leg Raises",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Chest Press with Crunch"
+    "name": "Slow Crunch",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "V-Sit with Shoulder Press"
+    "name": "Standing Row with Tricep Kickback",
+    "type": [
+      "upper"
+    ]
   },
   {
-    "name": "Straight Arm Situp"
+    "name": "Tricep Extension",
+    "type": [
+      "upper"
+    ]
   },
   {
-    "name": "Shoulder Press"
+    "name": "Standing Calf Raises",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Deadlift Row"
+    "name": "Chest Press with Crunch",
+    "type": [
+      "chest",
+      "core"
+    ]
   },
   {
-    "name": "Chest Fly Crunch"
+    "name": "V-Sit with Shoulder Press",
+    "type": [
+      "core",
+      "shoulder"
+    ]
+  },
+  {
+    "name": "Straight Arm Situp",
+    "type": [
+      "core"
+    ]
+  },
+  {
+    "name": "Shoulder Press",
+    "type": [
+      "shoulder"
+    ]
+  },
+  {
+    "name": "Deadlift Row",
+    "type": [
+      "upper",
+      "back"
+    ]
+  },
+  {
+    "name": "Chest Fly",
+    "type": [
+      "chest"
+    ]
+  },
+  {
+    "name": "Chest Fly Crunch",
+    "type": [
+      "chest",
+      "core"
+    ]
   },
   {
     "name": "Bird-Dog",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Leg Raises"
+    "name": "Leg Scissors",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Leg Scissors"
-  },
-  {
-    "name": "Hollow Body Holds"
+    "name": "Hollow Body Holds",
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Squat",
     "equipment": [
       "mini-band"
+    ],
+    "type": [
+      "lower"
     ]
   },
   {
     "name": "Squat Pulses",
     "equipment": [
       "mini-band"
+    ],
+    "type": [
+      "lower"
     ]
   },
   {
     "name": "Squat Clamshells",
     "equipment": [
       "mini-band"
+    ],
+    "type": [
+      "glutes"
     ]
   },
   {
@@ -111,182 +236,310 @@
     "equipment": [
       "mini-band"
     ],
-    "leftAndRight": true
+    "type": [
+      "glutes"
+    ]
   },
   {
     "name": "Rainbows",
     "equipment": [
       "mini-band"
     ],
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "glutes"
+    ]
   },
   {
     "name": "Fire Hydrants",
     "equipment": [
       "mini-band"
     ],
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "glutes"
+    ]
   },
   {
     "name": "Glute Bridge",
     "equipment": [
       "mini-band"
+    ],
+    "type": [
+      "glutes"
     ]
   },
   {
     "name": "Glute Bridge Pulses",
     "equipment": [
       "mini-band"
+    ],
+    "type": [
+      "glutes"
     ]
   },
   {
     "name": "Glute Bridge Clamshells",
     "equipment": [
       "mini-band"
+    ],
+    "type": [
+      "glutes"
     ]
   },
   {
-    "name": "Forearm Plank with Shoulder Taps"
+    "name": "Forearm Plank with Shoulder Taps",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Glute Bridge March"
+    "name": "Glute Bridge March",
+    "type": [
+      "glutes"
+    ]
   },
   {
-    "name": "Mountain Climbers"
+    "name": "Mountain Climbers",
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Half Get-Up",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Pushups"
+    "name": "Pushups",
+    "type": [
+      "chest"
+    ]
   },
   {
     "name": "Squats",
     "equipment": [
       "TRX",
       "bosu"
+    ],
+    "type": [
+      "lower"
     ]
   },
   {
-    "name": "Step-Ups"
+    "name": "Step-Ups",
+    "type": [
+      "lower",
+      "glutes"
+    ]
   },
   {
-    "name": "Flutter Forearm Planks"
+    "name": "Flutter Forearm Planks",
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Hamstring Curls",
     "equipment": [
       "ball"
+    ],
+    "type": [
+      "lower"
     ]
   },
   {
     "name": "Rollouts",
     "equipment": [
       "ball"
+    ],
+    "type": [
+      "core"
     ]
   },
   {
     "name": "Leg Pass",
     "equipment": [
       "ball"
+    ],
+    "type": [
+      "core"
     ]
   },
   {
     "name": "Side Plank",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "In-Place Bear Crawl"
+    "name": "In-Place Bear Crawl",
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Pavlov Press",
     "equipment": [
       "resistance-band"
     ],
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "upper"
+    ]
   },
   {
     "name": "Bottoms-Up Lunge Initiation",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Static Walking Plank"
+    "name": "Static Walking Plank",
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Body Saw",
     "equipment": [
       "roller"
+    ],
+    "type": [
+      "core"
     ]
   },
   {
-    "name": "High Plank"
+    "name": "High Plank",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "High Plank with Dumbell Drag"
+    "name": "High Plank with Dumbell Drag",
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Side Plank",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Russian Anti-Twist",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Kneeling Half-Windmill",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Bear Sit Through"
+    "name": "Bear Sit Through",
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Stir the pot",
     "leftAndRight": true,
     "equipment": [
       "ball"
+    ],
+    "type": [
+      "core"
     ]
   },
   {
-    "name": "Jumprope"
+    "name": "Jumprope",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Hight to low plank"
+    "name": "Hight to low plank",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Rotating Planks"
+    "name": "Rotating Planks",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Toe Taps"
+    "name": "Toe Taps",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Renegade Rows"
+    "name": "Renegade Rows",
+    "type": [
+      "upper",
+      "core"
+    ]
   },
   {
-    "name": "Walkouts"
+    "name": "Walkouts",
+    "type": [
+      "core"
+    ]
   },
   {
-    "name": "Burpees"
+    "name": "Burpees",
+    "type": [
+      "core",
+      "lower"
+    ]
   },
   {
-    "name": "Reverse Lunges"
+    "name": "Reverse Lunges",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Floor Chest Press"
+    "name": "Floor Chest Press",
+    "type": [
+      "chest"
+    ]
   },
   {
-    "name": "Heismans"
+    "name": "Heismans",
+    "type": [
+      "lower"
+    ]
   },
   {
     "name": "Chest Press",
     "equipment": [
       "TRX"
+    ],
+    "type": [
+      "chest"
     ]
   },
   {
     "name": "Row",
     "equipment": [
       "TRX"
+    ],
+    "type": [
+      "upper"
     ]
   },
   {
@@ -294,6 +547,9 @@
     "leftAndRight": true,
     "equipment": [
       "TRX"
+    ],
+    "type": [
+      "upper"
     ]
   },
   {
@@ -301,86 +557,155 @@
     "leftAndRight": true,
     "equipment": [
       "TRX"
+    ],
+    "type": [
+      "lower"
     ]
   },
   {
-    "name": "L-Sit with Overhead Press"
+    "name": "L-Sit with Overhead Press",
+    "type": [
+      "shoulder"
+    ]
   },
   {
     "name": "One-leg chops",
     "leftAndRight": true,
     "equipment": [
       "medicine-ball"
+    ],
+    "type": [
+      "core"
     ]
   },
   {
-    "name": "Deadlift"
+    "name": "Deadlift",
+    "type": [
+      "back"
+    ]
   },
   {
-    "name": "Kneeling Press"
+    "name": "Kneeling Press",
+    "type": [
+      "shoulder",
+      "core"
+    ]
   },
   {
     "name": "Pullup",
     "equipment": [
       "TRX"
+    ],
+    "type": [
+      "back"
     ]
   },
   {
     "name": "Medicine Ball Slams",
     "equipment": [
       "medicine-ball"
+    ],
+    "type": [
+      "upper"
     ]
   },
   {
     "name": "One leg glute bridge with one arm press",
-    "leftAndRight": true
+    "leftAndRight": true,
+    "type": [
+      "glutes",
+      "chest"
+    ]
   },
   {
     "name": "Y W T",
     "equipment": [
       "TRX"
+    ],
+    "type": [
+      "core",
+      "upper"
     ]
   },
   {
-    "name": "Curtsey Lunge"
+    "name": "Curtsey Lunge",
+    "type": [
+      "lower"
+    ]
   },
   {
     "name": "Bosu Walk Overs",
     "equipment": [
       "bosu"
+    ],
+    "type": [
+      "core"
     ]
   },
   {
-    "name": "High Knees"
+    "name": "High Knees",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Kettlebell Swings"
+    "name": "Kettlebell Swings",
+    "type": [
+      "back"
+    ]
   },
   {
-    "name": "Jumping Jacks"
+    "name": "Jumping Jacks",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Squat Jacks"
+    "name": "Squat Jacks",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Quick Feet"
+    "name": "Quick Feet",
+    "type": [
+      "lower"
+    ]
   },
   {
     "name": "Rollouts",
     "equipment": [
       "ball"
+    ],
+    "type": [
+      "core"
     ]
   },
   {
-    "name": "Goblet Squat with Sit and Reach"
+    "name": "Goblet Squat with Sit and Reach",
+    "type": [
+      "lower"
+    ]
   },
   {
-    "name": "Plank Jacks"
+    "name": "Plank Jacks",
+    "type": [
+      "core"
+    ]
   },
   {
     "name": "Medicine Ball Jump Bounce",
     "equipment": [
       "medicine-ball"
+    ],
+    "type": [
+      "lower"
+    ]
+  },
+  {
+    "name": "Bench Press",
+    "type": [
+      "chest"
     ]
   }
 ]
