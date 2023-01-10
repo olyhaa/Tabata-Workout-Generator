@@ -1,5 +1,9 @@
 export const GREEN_COLOR = 8;
 
+export const DEFAULT_PREPARE_TIME = 0;
+export const DEFAULT_WORK_TIME = 30;
+export const DEFAULT_REST_TIME = 15;
+
 export const PREPARE_INTERVAL = 0;
 export const WORK_INTERVAL = 1;
 export const REST_INTERVAL = 2;
@@ -15,7 +19,6 @@ export const getIntervalTypeDisplay = function (interval: number): string {
   return `${interval}`
 }
 
-
 export const BASE_EXERCISE_OBJ = {
   addSet: false,
   bpm: 0,
@@ -27,7 +30,7 @@ export const BASE_EXERCISE_OBJ = {
   tabatasCount: -1,
   description: "Work",
   type: WORK_INTERVAL,
-  time: 15
+  time: DEFAULT_WORK_TIME
 };
 
 export const BASE_WORKOUT_OBJ = {
