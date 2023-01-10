@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BASE_WORKOUT_OBJ } from 'src/generate/constants';
+import { BASE_WORKOUT_OBJ } from 'src/app/constants';
 import { GenerateIntervalsService } from './generate-intervals.service';
 import { Exercise, GeneratedInterval, GeneratedWorkout, GREEN_COLOR } from './types';
 

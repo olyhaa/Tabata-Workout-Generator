@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BASE_FILE_OBJ } from 'src/generate/constants';
+import { BASE_FILE_OBJ } from 'src/app/constants';
 import { GenerateWorkoutService } from './generate-workout.service';
 import { GeneratedExport, WorkoutParams } from './types';
 

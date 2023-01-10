@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BASE_EXERCISE_OBJ } from 'src/generate/constants';
+import { BASE_EXERCISE_OBJ } from 'src/app/constants';
 import { GeneratedInterval, PREPARE_INTERVAL, REST_INTERVAL, WORK_INTERVAL } from './types';
 
 @Injectable({
