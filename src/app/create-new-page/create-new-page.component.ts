@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GenerateFileService } from '../generate-file.service';
+import { ParseWorkoutParamsService } from '../parse-workout-params.service';
 import { GeneratedWorkout, WorkoutParams } from '../types';
 
 @Component({
@@ -11,12 +12,11 @@ export class CreateNewPageComponent {
   workout: GeneratedWorkout | {} | undefined
     = undefined
 
-  constructor(private generateService: GenerateFileService) { }
+  constructor(private generateService: GenerateFileService, private parseService: ParseWorkoutParamsService) { }
 
   generateWorkout(workout: WorkoutParams) {
     console.log(workout)
-    // TODO pick exercise list
-
-    this.workout = this.generateService.generateExport(workout).workout
+    const parsedParams = this.parseService.parseParams(workout);
+    this.workout = this.generateService.generateExport(parsedParams).workout
   }
 }
