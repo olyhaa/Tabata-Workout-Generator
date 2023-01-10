@@ -1,4 +1,20 @@
-import { GREEN_COLOR, WORK_INTERVAL } from "src/app/types";
+export const GREEN_COLOR = 8;
+
+export const PREPARE_INTERVAL = 0;
+export const WORK_INTERVAL = 1;
+export const REST_INTERVAL = 2;
+
+export const getIntervalTypeDisplay = function (interval: number): string {
+  if (interval === PREPARE_INTERVAL) {
+    return "Prepare"
+  } else if (interval === WORK_INTERVAL) {
+    return "Work"
+  } else if (interval === REST_INTERVAL) {
+    return "Rest"
+  }
+  return `${interval}`
+}
+
 
 export const BASE_EXERCISE_OBJ = {
   addSet: false,

@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { getIntervalTypeDisplay } from '../types';
+import { getIntervalTypeDisplay } from '../constants';
 
 @Component({
   selector: 'app-workout-table',

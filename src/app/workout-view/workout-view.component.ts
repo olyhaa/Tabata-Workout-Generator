@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Interval, REST_INTERVAL, WORK_INTERVAL } from '../types';
+import { Component, Input } from '@angular/core';
+import { Interval } from '../types';
+import { REST_INTERVAL, WORK_INTERVAL } from '../constants';
 
 @Component({
   selector: 'app-workout-view',
