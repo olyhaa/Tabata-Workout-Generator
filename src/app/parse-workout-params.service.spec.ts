@@ -25,16 +25,20 @@ describe('ParseWorkoutParamsService', () => {
       restTime: DEFAULT_REST_TIME,
       exerciseList: [
         {
-          name: "exercise 1"
+          name: "exercise 1",
+          type: ["upper"]
         },
         {
-          name: "exercise 2"
+          name: "exercise 2",
+          type: ["core"]
         },
         {
-          name: "exercise 3"
+          name: "exercise 3",
+          type: ["glutes"]
         },
         {
-          name: "exercise 4"
+          name: "exercise 4",
+          type: ["core"]
         }
       ]
     }

@@ -102,6 +102,7 @@ describe('GenerateWorkoutService', () => {
       const customExerciseList = [
         {
           name: "Leg Raises",
+          type: ["core"]
         },
       ];
 
@@ -209,9 +210,11 @@ describe('GenerateWorkoutService', () => {
         {
           name: "Bird-Dog",
           leftAndRight: true,
+          type: ["core"]
         },
         {
           name: "Leg Raises",
+          type: ["core"]
         },
       ];
 
