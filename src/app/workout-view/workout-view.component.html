@@ -1,5 +1,4 @@
 <h1>{{workout?.title}}</h1>
-<p>Total Time: {{getTime(totalTime)}}</p>
-<h2>Intervals:</h2>
-<p *ngIf="workout.intervalsSetsCount > 1">Interval Repeats: {{workout.intervalsSetsCount}}</p>
+<p *ngIf="workout.intervalsSetsCount > 1">Cycles: {{workout.intervalsSetsCount}}</p>
 <app-workout-table [workout]="intervals"></app-workout-table>
+<p class="total-time">Total Time: {{getTime(totalTime)}}</p>
