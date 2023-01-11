@@ -14,8 +14,8 @@ export class CreateNewPageComponent {
   constructor(private generateService: GenerateFileService, private parseService: ParseWorkoutParamsService) { }
 
   generateWorkout(workout: WorkoutParams) {
-    console.log(workout)
     const parsedParams = this.parseService.parseParams(workout);
+    console.log(`Creating workout with params: ${JSON.stringify(parsedParams)}`)
     this.workout = this.generateService.generateExport(parsedParams).workout
   }
 }

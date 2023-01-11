@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { GenerateWorkoutService } from './generate-workout.service';
-import { GREEN_COLOR, PREPARE_INTERVAL, REST_INTERVAL, WORK_INTERVAL } from './constants';
+import { DEFAULT_NUM_CYCLES, GREEN_COLOR, PREPARE_INTERVAL, REST_INTERVAL, WORK_INTERVAL } from './constants';
 
 describe('GenerateWorkoutService', () => {
   let service: GenerateWorkoutService;
@@ -28,7 +28,7 @@ describe('GenerateWorkoutService', () => {
         colorId: GREEN_COLOR,
         id: -1,
         intervals: [],
-        intervalsSetsCount: 1,
+        intervalsSetsCount: DEFAULT_NUM_CYCLES,
         title: "New Workout",
       };
 
@@ -51,7 +51,7 @@ describe('GenerateWorkoutService', () => {
         title: "Custom Workout",
       };
 
-      expect(service.getWorkout({ id: 25, title: "Custom Workout", numSets: 2 })).toEqual(
+      expect(service.getWorkout({ id: 25, title: "Custom Workout", numCycles: 2 })).toEqual(
         expectedWorkout
       );
     });
@@ -202,7 +202,7 @@ describe('GenerateWorkoutService', () => {
             time: 15,
           },
         ],
-        intervalsSetsCount: 1,
+        intervalsSetsCount: DEFAULT_NUM_CYCLES,
         title: "New Workout",
       };
 
