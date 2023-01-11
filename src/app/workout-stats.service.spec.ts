@@ -113,6 +113,64 @@ describe('WorkoutStatsService', () => {
     expect(service.getTotalTime(workout)).toBe(service.getTime(173));
   });
 
+  it('should calculate total time for multiple cycles', () => {
+    const workout: GeneratedWorkout = {
+      doNotRepeatFirstPrepareAndLastCoolDown: false,
+      isFavorite: false,
+      isRestRepsMode: false,
+      isWorkRepsMode: false,
+      restBetweenWorkoutsRepsMode: false,
+      skipLastRestInterval: true,
+      skipPrepareAndCoolDownBetweenWorkouts: false,
+      colorId: GREEN_COLOR,
+      id: -1,
+      intervals: [
+        {
+          addSet: false,
+          bpm: 0,
+          cycle: -1,
+          cyclesCount: -1,
+          isRepsMode: false,
+          reps: 0,
+          tabata: -1,
+          tabatasCount: -1,
+          description: "Prepare",
+          type: PREPARE_INTERVAL,
+          time: 62,
+        },
+        {
+          addSet: false,
+          bpm: 0,
+          cycle: -1,
+          cyclesCount: -1,
+          isRepsMode: false,
+          reps: 0,
+          tabata: -1,
+          tabatasCount: -1,
+          description: "Leg Raises",
+          type: WORK_INTERVAL,
+          time: 25,
+        },
+        {
+          addSet: false,
+          bpm: 0,
+          cycle: -1,
+          cyclesCount: -1,
+          isRepsMode: false,
+          reps: 0,
+          tabata: -1,
+          tabatasCount: -1,
+          description: "Rest",
+          type: REST_INTERVAL,
+          time: 10,
+        },
+      ],
+      intervalsSetsCount: 2,
+      title: "New Workout",
+    };
+    expect(service.getTotalTime(workout)).toBe(service.getTime(122));
+  });
+
   it('should convert time', () => {
     expect(service.getTime(60)).toBe("1:00");
     expect(service.getTime(34)).toBe("0:34");
