@@ -1,3 +1,5 @@
 <app-workout-params (newParamsEvent)="generateWorkout($event)"></app-workout-params>
 <mat-divider class="divider"></mat-divider>
-<app-workout-view *ngIf="workout" [workout]="workout"></app-workout-view>
+<app-workout-view *ngIf="workout" [workout]="workout.workout"></app-workout-view>
+<a mat-raised-button mat-button color="primary" *ngIf="workout" [href]="workoutJsonUrl"
+  download="workout.json">Download</a>
