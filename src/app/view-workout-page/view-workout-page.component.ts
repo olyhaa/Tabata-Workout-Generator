@@ -1,14 +1,5 @@
 import { Component } from '@angular/core';
-import core8 from "../../../scratch/Core8.workout.json";
-import strength from "../../../scratch/Strength.workout.json";
-import glutes from "../../../scratch/Glutes.workout.json";
-import ballAndPlank from "../../../scratch/BallAndPlank.workout.json";
 import { GeneratedWorkout } from '../types';
-
-type WorkoutItem = {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-view-workout-page',
@@ -16,33 +7,17 @@ type WorkoutItem = {
   styleUrls: ['./view-workout-page.component.css']
 })
 export class ViewWorkoutPageComponent {
-  workout: GeneratedWorkout = core8.workout;
-  selected: string = "core8"
+  workout?: GeneratedWorkout;
 
-
-  workouts: WorkoutItem[] = [
-    {
-      value: "core8", viewValue: 'Core #8'
-    },
-    {
-      value: 'glutes', viewValue: 'Mini-Band Glutes'
-    },
-    { value: 'strength', viewValue: 'Strength' },
-    { value: 'ballAndPlank', viewValue: "Ball and Plank" }
-  ];
-
-  switchWorkout(value: string) {
-    if (value === "core8") {
-      this.workout = core8.workout;
+  jsonInputChange(fileInputEvent: any) {
+    const file = fileInputEvent.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.readAsText(file, "UTF-8");
+    fileReader.onload = () => {
+      this.workout = JSON.parse(fileReader.result as string);
     }
-    if (value === "glutes") {
-      this.workout = glutes.workout;
-    }
-    if (value === "strength") {
-      this.workout = strength.workout;
-    }
-    if (value === "ballAndPlank") {
-      this.workout = ballAndPlank.workout;
+    fileReader.onerror = (error) => {
+      console.log(error);
     }
   }
 }

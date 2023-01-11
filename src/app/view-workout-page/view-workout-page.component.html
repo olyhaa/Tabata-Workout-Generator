@@ -1,9 +1,5 @@
-<mat-form-field appearance="fill">
-  <mat-label>View Workout</mat-label>
-  <mat-select [(value)]="selected" (selectionChange)="switchWorkout(selected)">
-    <mat-option *ngFor="let workout of workouts" [value]="workout.value">
-      {{workout.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<app-workout-view [workout]="workout"></app-workout-view>
+<input #jsonInput hidden="true" type="file" onclick="this.value=null" (change)="jsonInputChange($event)"
+  accept=".json" />
+<button mat-raised-button color="primary" (click)="jsonInput.click()">Choose Workout File (json)</button>
+
+<app-workout-view *ngIf="workout" [workout]="workout"></app-workout-view>
