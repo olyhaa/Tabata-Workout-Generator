@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BASE_WORKOUT_OBJ, GREEN_COLOR } from 'src/app/constants';
+import { BASE_WORKOUT_OBJ, DEFAULT_NUM_CYCLES, GREEN_COLOR } from 'src/app/constants';
 import { GenerateIntervalsService } from './generate-intervals.service';
 import { Exercise, GeneratedInterval, GeneratedWorkout } from './types';
 
@@ -14,20 +14,20 @@ export class GenerateWorkoutService {
     id = -1,
     title = "New Workout",
     colorId = GREEN_COLOR,
-    numSets = 1,
+    numCycles = DEFAULT_NUM_CYCLES,
     exerciseList = [],
-  }: { id?: number, title?: string, colorId?: number, numSets?: number, exerciseList?: Exercise[] }) {
+  }: { id?: number, title?: string, colorId?: number, numSets?: number, numCycles?: number, exerciseList?: Exercise[] }) {
     const workoutObj: GeneratedWorkout = Object.assign({}, BASE_WORKOUT_OBJ);
     workoutObj.colorId = colorId;
     workoutObj.id = id;
     workoutObj.intervals = this.getWorkoutIntervals({ exerciseList });
-    workoutObj.intervalsSetsCount = numSets;
+    workoutObj.intervalsSetsCount = numCycles;
     workoutObj.title = title;
 
     return workoutObj;
   }
 
-  getWorkoutIntervals({ exerciseList = [] }: { exerciseList?: Exercise[] }): GeneratedInterval[] {
+  getWorkoutIntervals({ exerciseList }: { exerciseList: Exercise[] }): GeneratedInterval[] {
     const newList: GeneratedInterval[] = [];
 
     // add prepare at the start
@@ -55,7 +55,6 @@ export class GenerateWorkoutService {
         return newResult;
       }, [])
     );
-
   }
 }
 
