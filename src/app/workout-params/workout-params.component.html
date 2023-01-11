@@ -1,66 +1,69 @@
-<mat-form-field class="fieldInput--fullwidth" appearance="fill">
-  <mat-label>Title</mat-label>
-  <input matInput type="text" [formControl]="title">
-</mat-form-field>
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Structure
-      </mat-panel-title>
-      <mat-panel-description>
-        Sets and Cycles
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <mat-form-field class="fieldInput" appearance="fill">
-      <mat-label>Number of Sets</mat-label>
-      <input matInput type="number" [formControl]="numSets">
-    </mat-form-field>
-    <mat-form-field class="fieldInput" appearance="fill">
-      <mat-label>Number of Cycles</mat-label>
-      <input matInput type="number" [formControl]="numCycles">
-    </mat-form-field>
-  </mat-expansion-panel>
+<form [formGroup]="workoutForm" (ngSubmit)="getParams()">
+  <mat-form-field class="fieldInput--fullwidth" appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput type="text" formControlName="title">
+  </mat-form-field>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Structure
+        </mat-panel-title>
+        <mat-panel-description>
+          Sets and Cycles
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-form-field class="fieldInput" appearance="fill">
+        <mat-label>Number of Sets</mat-label>
+        <input matInput type="number" formControlName="numSets">
+      </mat-form-field>
+      <mat-form-field class="fieldInput" appearance="fill">
+        <mat-label>Number of Cycles</mat-label>
+        <input matInput type="number" formControlName="numCycles">
+      </mat-form-field>
+    </mat-expansion-panel>
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Timings
-      </mat-panel-title>
-      <mat-panel-description>
-        Prepare, Work, and Rest
-      </mat-panel-description>
-    </mat-expansion-panel-header>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Timings
+        </mat-panel-title>
+        <mat-panel-description>
+          Prepare, Work, and Rest
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-    <mat-form-field class="fieldInput" appearance="fill">
-      <mat-label>Prepare Time</mat-label>
-      <input matInput type="number" [formControl]="prepareTime">
-      <span class="fieldSuffix" matSuffix>sec</span>
-    </mat-form-field>
-    <mat-form-field class="fieldInput" appearance="fill">
-      <mat-label>Work Time</mat-label>
-      <input matInput type="number" [formControl]="workTime">
-      <span class="fieldSuffix" matSuffix>sec</span>
-    </mat-form-field>
-    <mat-form-field class="fieldInput" appearance="fill">
-      <mat-label>Rest Time</mat-label>
-      <input matInput type="number" [formControl]="restTime">
-      <span class="fieldSuffix" matSuffix>sec</span>
-    </mat-form-field>
+      <mat-form-field class="fieldInput" appearance="fill">
+        <mat-label>Prepare Time</mat-label>
+        <input matInput type="number" formControlName="prepareTime">
+        <span class="fieldSuffix" matSuffix>sec</span>
+      </mat-form-field>
+      <mat-form-field class="fieldInput" appearance="fill">
+        <mat-label>Work Time</mat-label>
+        <input matInput type="number" formControlName="workTime">
+        <span class="fieldSuffix" matSuffix>sec</span>
+      </mat-form-field>
+      <mat-form-field class="fieldInput" appearance="fill">
+        <mat-label>Rest Time</mat-label>
+        <input matInput type="number" formControlName="restTime">
+        <span class="fieldSuffix" matSuffix>sec</span>
+      </mat-form-field>
 
-  </mat-expansion-panel>
+    </mat-expansion-panel>
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Available Exercises
-      </mat-panel-title>
-      <mat-panel-description>
-        {{selection.selected.length === exerciseList.length ? "All" : selection.selected.length}} selected
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <app-exercise-list [exercises]="exerciseList" [selection]="selection"></app-exercise-list>
-  </mat-expansion-panel>
-</mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Available Exercises
+        </mat-panel-title>
+        <mat-panel-description>
+          {{selection.selected.length === exerciseList.length ? "All" : selection.selected.length}} selected
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-exercise-list [exercises]="exerciseList" [selection]="selection"></app-exercise-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+</form>
 
-<button mat-raised-button mat-button color="primary" class="generateButton" (click)="getParams()">Generate!</button>
+<button mat-raised-button mat-button color="primary" class="generateButton" type="submit" (click)="getParams()"
+  [disabled]="!workoutForm.valid">Generate!</button>
