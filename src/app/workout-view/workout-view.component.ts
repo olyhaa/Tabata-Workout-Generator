@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { GeneratedWorkout, CombinedInterval } from '../types';
 import { WorkoutStatsService } from '../workout-stats.service';
 
@@ -7,14 +7,14 @@ import { WorkoutStatsService } from '../workout-stats.service';
   templateUrl: './workout-view.component.html',
   styleUrls: ['./workout-view.component.css']
 })
-export class WorkoutViewComponent implements OnInit {
+export class WorkoutViewComponent implements OnChanges {
   @Input() workout?: GeneratedWorkout;
   totalTime?: string;
   intervals: CombinedInterval[] = [];
 
   constructor(private workoutStatsService: WorkoutStatsService) { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     if (this.workout) {
       this.totalTime = this.workoutStatsService.getTotalTime(this.workout);
       this.intervals = this.workoutStatsService.extractIntervals(this.workout);

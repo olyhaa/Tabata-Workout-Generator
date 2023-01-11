@@ -10,15 +10,15 @@ import { GeneratedExport, GeneratedWorkout, WorkoutParams } from '../types';
   styleUrls: ['./create-new-page.component.css']
 })
 export class CreateNewPageComponent {
-  workout?: GeneratedExport;
+  workout?: GeneratedWorkout;
   workoutJsonUrl: SafeUrl = "";
 
   constructor(private generateService: GenerateFileService, private parseService: ParseWorkoutParamsService, private sanitizer: DomSanitizer) { }
 
   generateWorkout(workout: WorkoutParams) {
     const parsedParams = this.parseService.parseParams(workout);
-    console.log(`Creating workout with params: ${JSON.stringify(parsedParams)}`)
-    this.workout = this.generateService.generateExport(parsedParams)
+    const generatedExport: GeneratedExport = this.generateService.generateExport(parsedParams);
+    this.workout = generatedExport.workout;
     this.workoutJsonUrl = this.sanitizer.bypassSecurityTrustUrl("data:text/json;charset=UTF-8," + encodeURIComponent(JSON.stringify(this.workout)));
   }
 }
