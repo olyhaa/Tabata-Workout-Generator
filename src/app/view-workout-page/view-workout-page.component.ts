@@ -3,6 +3,7 @@ import core8 from "../../../scratch/Core8.workout.json";
 import strength from "../../../scratch/Strength.workout.json";
 import glutes from "../../../scratch/Glutes.workout.json";
 import ballAndPlank from "../../../scratch/BallAndPlank.workout.json";
+import { GeneratedWorkout } from '../types';
 
 type WorkoutItem = {
   value: string;
@@ -15,7 +16,7 @@ type WorkoutItem = {
   styleUrls: ['./view-workout-page.component.css']
 })
 export class ViewWorkoutPageComponent {
-  workout = core8.workout;
+  workout: GeneratedWorkout = core8.workout;
   selected: string = "core8"
 
 

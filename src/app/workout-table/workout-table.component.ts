@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { getIntervalTypeDisplay } from '../constants';
+import { CombinedInterval } from '../types';
 
 @Component({
   selector: 'app-workout-table',
@@ -8,7 +9,7 @@ import { getIntervalTypeDisplay } from '../constants';
   styleUrls: ['./workout-table.component.css']
 })
 export class WorkoutTableComponent implements OnChanges {
-  @Input() workout: any = []
+  @Input() workout: CombinedInterval[] = []
   displayedColumns: string[] = ['index', 'description', 'workTime', 'restTime'];
   dataSource: any = undefined;
 

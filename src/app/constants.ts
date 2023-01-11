@@ -57,6 +57,5 @@ export const BASE_FILE_OBJ = {
   platform: 1,
   type: 1,
   versionCode: 502002,
-  versionName: "5.2.2",
-  workout: {}
+  versionName: "5.2.2"
 };

@@ -5,19 +5,12 @@ export type Exercise = {
   type: string[]
 }
 
-export type Interval = {
+export type CombinedInterval = {
   description?: string,
   work?: number,
   rest?: number,
   workTime?: string,
   restTime?: string
-}
-
-export type Workout = {
-  title?: string,
-  colorId?: number,
-  intervals?: Interval[],
-  intervalsSetsCount?: number
 }
 
 export type WorkoutParams = {
@@ -39,7 +32,7 @@ export type GeneratedInterval = {
   reps: number,
   tabata: number,
   tabatasCount: number,
-  description: string,
+  description?: string,
   type: number,
   time: number
 }
@@ -66,5 +59,5 @@ export type GeneratedExport = {
   type: number,
   versionCode: number,
   versionName: string,
-  workout: GeneratedWorkout | {}
+  workout?: GeneratedWorkout
 }

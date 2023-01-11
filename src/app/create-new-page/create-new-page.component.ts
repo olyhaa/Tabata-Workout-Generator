@@ -9,8 +9,7 @@ import { GeneratedWorkout, WorkoutParams } from '../types';
   styleUrls: ['./create-new-page.component.css']
 })
 export class CreateNewPageComponent {
-  workout: GeneratedWorkout | {} | undefined
-    = undefined
+  workout?: GeneratedWorkout;
 
   constructor(private generateService: GenerateFileService, private parseService: ParseWorkoutParamsService) { }
 
