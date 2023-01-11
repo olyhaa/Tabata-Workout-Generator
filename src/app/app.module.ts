@@ -26,6 +26,7 @@ import { WorkoutParamsComponent } from './workout-params/workout-params.componen
 import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { WorkoutViewComponent } from './workout-view/workout-view.component';
 import { WorkoutTableComponent } from './workout-table/workout-table.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,9 @@ import { WorkoutTableComponent } from './workout-table/workout-table.component'
     MatTableModule,
     MatSortModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

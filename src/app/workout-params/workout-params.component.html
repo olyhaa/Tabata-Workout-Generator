@@ -1,6 +1,6 @@
 <mat-form-field class="fieldInput--fullwidth" appearance="fill">
   <mat-label>Title</mat-label>
-  <input matInput [value]="title">
+  <input matInput type="text" [formControl]="title">
 </mat-form-field>
 <mat-accordion>
   <mat-expansion-panel>
@@ -14,11 +14,11 @@
     </mat-expansion-panel-header>
     <mat-form-field class="fieldInput" appearance="fill">
       <mat-label>Number of Sets</mat-label>
-      <input matInput type="number" [value]="numSets">
+      <input matInput type="number" [formControl]="numSets">
     </mat-form-field>
     <mat-form-field class="fieldInput" appearance="fill">
       <mat-label>Number of Cycles</mat-label>
-      <input matInput type="number" [value]="numCycles">
+      <input matInput type="number" [formControl]="numCycles">
     </mat-form-field>
   </mat-expansion-panel>
 
@@ -34,17 +34,17 @@
 
     <mat-form-field class="fieldInput" appearance="fill">
       <mat-label>Prepare Time</mat-label>
-      <input matInput type="number" [value]="prepareTime">
+      <input matInput type="number" [formControl]="prepareTime">
       <span class="fieldSuffix" matSuffix>sec</span>
     </mat-form-field>
     <mat-form-field class="fieldInput" appearance="fill">
       <mat-label>Work Time</mat-label>
-      <input matInput type="number" [value]="workTime">
+      <input matInput type="number" [formControl]="workTime">
       <span class="fieldSuffix" matSuffix>sec</span>
     </mat-form-field>
     <mat-form-field class="fieldInput" appearance="fill">
       <mat-label>Rest Time</mat-label>
-      <input matInput type="number" [value]="restTime">
+      <input matInput type="number" [formControl]="restTime">
       <span class="fieldSuffix" matSuffix>sec</span>
     </mat-form-field>
 
