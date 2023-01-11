@@ -1,8 +1,13 @@
 <form [formGroup]="workoutForm" (ngSubmit)="getParams()">
   <mat-form-field class="fieldInput--fullwidth" appearance="fill">
     <mat-label>Title</mat-label>
-    <input matInput type="text" formControlName="title">
+    <input matInput type="text" formControlName="title" />
+    <mat-error
+      *ngIf="workoutForm.get('title')?.invalid && (workoutForm.get('title')?.dirty || workoutForm.get('title')?.touched)">
+      {{getErrorMessage('title')}}
+    </mat-error>
   </mat-form-field>
+
   <mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
@@ -15,11 +20,19 @@
       </mat-expansion-panel-header>
       <mat-form-field class="fieldInput" appearance="fill">
         <mat-label>Number of Sets</mat-label>
-        <input matInput type="number" formControlName="numSets">
+        <input matInput type="number" formControlName="numSets" />
+        <mat-error
+          *ngIf="workoutForm.get('numSets')?.invalid && (workoutForm.get('numSets')?.dirty || workoutForm.get('numSets')?.touched)">
+          {{getErrorMessage('numSets')}}
+        </mat-error>
       </mat-form-field>
       <mat-form-field class="fieldInput" appearance="fill">
         <mat-label>Number of Cycles</mat-label>
-        <input matInput type="number" formControlName="numCycles">
+        <input matInput type="number" formControlName="numCycles" />
+        <mat-error
+          *ngIf="workoutForm.get('numCycles')?.invalid && (workoutForm.get('numCycles')?.dirty || workoutForm.get('numCycles')?.touched)">
+          {{getErrorMessage('numCycles')}}
+        </mat-error>
       </mat-form-field>
     </mat-expansion-panel>
 
@@ -35,18 +48,30 @@
 
       <mat-form-field class="fieldInput" appearance="fill">
         <mat-label>Prepare Time</mat-label>
-        <input matInput type="number" formControlName="prepareTime">
+        <input matInput type="number" formControlName="prepareTime" />
         <span class="fieldSuffix" matSuffix>sec</span>
+        <mat-error
+          *ngIf="workoutForm.get('prepareTime')?.invalid && (workoutForm.get('prepareTime')?.dirty || workoutForm.get('prepareTime')?.touched)">
+          {{getErrorMessage('prepareTime')}}
+        </mat-error>
       </mat-form-field>
       <mat-form-field class="fieldInput" appearance="fill">
         <mat-label>Work Time</mat-label>
-        <input matInput type="number" formControlName="workTime">
+        <input matInput type="number" formControlName="workTime" />
         <span class="fieldSuffix" matSuffix>sec</span>
+        <mat-error
+          *ngIf="workoutForm.get('workTime')?.invalid && (workoutForm.get('workTime')?.dirty || workoutForm.get('workTime')?.touched)">
+          {{getErrorMessage('workTime')}}
+        </mat-error>
       </mat-form-field>
       <mat-form-field class="fieldInput" appearance="fill">
         <mat-label>Rest Time</mat-label>
-        <input matInput type="number" formControlName="restTime">
+        <input matInput type="number" formControlName="restTime" />
         <span class="fieldSuffix" matSuffix>sec</span>
+        <mat-error
+          *ngIf="workoutForm.get('restTime')?.invalid && (workoutForm.get('restTime')?.dirty || workoutForm.get('restTime')?.touched)">
+          {{getErrorMessage('restTime')}}
+        </mat-error>
       </mat-form-field>
 
     </mat-expansion-panel>

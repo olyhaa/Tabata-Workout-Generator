@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Exercise, WorkoutParams } from '../types';
 import { SelectionModel } from '@angular/cdk/collections';
 import { DEFAULT_NUM_CYCLES, DEFAULT_NUM_SETS, DEFAULT_PREPARE_TIME, DEFAULT_REST_TIME, DEFAULT_WORK_TIME } from '../constants';
@@ -15,12 +15,12 @@ export class WorkoutParamsComponent implements OnInit {
   exerciseList: Exercise[] = [];
 
   workoutForm = new FormGroup({
-    title: new FormControl(""),
-    numSets: new FormControl(DEFAULT_NUM_SETS),
-    numCycles: new FormControl(DEFAULT_NUM_CYCLES),
-    prepareTime: new FormControl(DEFAULT_PREPARE_TIME),
-    workTime: new FormControl(DEFAULT_WORK_TIME),
-    restTime: new FormControl(DEFAULT_REST_TIME)
+    title: new FormControl("", [Validators.required]),
+    numSets: new FormControl(DEFAULT_NUM_SETS, [Validators.required, Validators.min(0)]),
+    numCycles: new FormControl(DEFAULT_NUM_CYCLES, [Validators.required, Validators.min(0)]),
+    prepareTime: new FormControl(DEFAULT_PREPARE_TIME, [Validators.required, Validators.min(0)]),
+    workTime: new FormControl(DEFAULT_WORK_TIME, [Validators.required, Validators.min(0)]),
+    restTime: new FormControl(DEFAULT_REST_TIME, [Validators.required, Validators.min(0)])
   });
 
   initialSelection = [];
@@ -43,5 +43,13 @@ export class WorkoutParamsComponent implements OnInit {
       exerciseList: this.selection.selected
     }
     this.newParamsEvent.emit(newParams);
+  }
+
+  getErrorMessage(field: string) {
+    if (this.workoutForm.get(field)?.hasError('required')) {
+      return 'This field is required';
+    }
+
+    return 'Not a valid value';
   }
 }
