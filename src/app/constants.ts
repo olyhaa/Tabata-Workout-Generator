@@ -37,7 +37,7 @@ export const BASE_EXERCISE_OBJ = {
 };
 
 export const BASE_WORKOUT_OBJ = {
-  doNotRepeatFirstPrepareAndLastCoolDown: false,
+  doNotRepeatFirstPrepareAndLastCoolDown: true,
   isFavorite: false,
   isRestRepsMode: false,
   isWorkRepsMode: false,

@@ -18,7 +18,7 @@ describe('GenerateWorkoutService', () => {
   describe("getWorkout", () => {
     it("should generate default workout object", () => {
       const expectedWorkout = {
-        doNotRepeatFirstPrepareAndLastCoolDown: false,
+        doNotRepeatFirstPrepareAndLastCoolDown: true,
         isFavorite: false,
         isRestRepsMode: false,
         isWorkRepsMode: false,
@@ -37,7 +37,7 @@ describe('GenerateWorkoutService', () => {
 
     it("should generate custom workout object", () => {
       const expectedWorkout = {
-        doNotRepeatFirstPrepareAndLastCoolDown: false,
+        doNotRepeatFirstPrepareAndLastCoolDown: true,
         isFavorite: false,
         isRestRepsMode: false,
         isWorkRepsMode: false,
@@ -113,7 +113,7 @@ describe('GenerateWorkoutService', () => {
 
     it("should generate custom workout object with exercise list", () => {
       const expectedWorkout = {
-        doNotRepeatFirstPrepareAndLastCoolDown: false,
+        doNotRepeatFirstPrepareAndLastCoolDown: true,
         isFavorite: false,
         isRestRepsMode: false,
         isWorkRepsMode: false,
