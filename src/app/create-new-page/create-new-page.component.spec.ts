@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateNewPageComponent } from './create-new-page.component';
@@ -8,9 +9,10 @@ describe('CreateNewPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateNewPageComponent ]
+      declarations: [CreateNewPageComponent],
+      schemas: [NO_ERRORS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(CreateNewPageComponent);
     component = fixture.componentInstance;

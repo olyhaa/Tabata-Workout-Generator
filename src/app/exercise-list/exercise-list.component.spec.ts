@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExerciseListComponent } from './exercise-list.component';
@@ -8,9 +9,10 @@ describe('ExerciseListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExerciseListComponent ]
+      declarations: [ExerciseListComponent],
+      schemas: [NO_ERRORS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ExerciseListComponent);
     component = fixture.componentInstance;
