@@ -12,6 +12,7 @@ import { GeneratedExport, GeneratedWorkout, WorkoutParams } from '../types';
 export class CreateNewPageComponent {
   workout?: GeneratedWorkout;
   workoutJsonUrl: SafeUrl = "";
+  workoutName: string = "";
 
   constructor(private generateService: GenerateFileService, private parseService: ParseWorkoutParamsService, private sanitizer: DomSanitizer) { }
 
@@ -19,6 +20,7 @@ export class CreateNewPageComponent {
     const parsedParams = this.parseService.parseParams(workout);
     const generatedExport: GeneratedExport = this.generateService.generateExport(parsedParams);
     this.workout = generatedExport.workout;
+    this.workoutName = parsedParams.title;
     this.workoutJsonUrl = this.sanitizer.bypassSecurityTrustUrl("data:text/json;charset=UTF-8," + encodeURIComponent(JSON.stringify(generatedExport)));
   }
 }
