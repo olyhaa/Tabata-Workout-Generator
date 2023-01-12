@@ -14,7 +14,7 @@ export class ExerciseListComponent implements AfterViewInit {
   @Input() selection: SelectionModel<Exercise> = new SelectionModel<Exercise>(true, []);
   @ViewChild(MatSort) sort: MatSort = new MatSort();
 
-  displayedColumns: string[] = ['select', 'name', 'equipment'];
+  displayedColumns: string[] = ['select', 'name', 'type', 'equipment'];
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
