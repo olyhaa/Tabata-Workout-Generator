@@ -19,6 +19,6 @@ export class CreateNewPageComponent {
     const parsedParams = this.parseService.parseParams(workout);
     const generatedExport: GeneratedExport = this.generateService.generateExport(parsedParams);
     this.workout = generatedExport.workout;
-    this.workoutJsonUrl = this.sanitizer.bypassSecurityTrustUrl("data:text/json;charset=UTF-8," + encodeURIComponent(JSON.stringify(this.workout)));
+    this.workoutJsonUrl = this.sanitizer.bypassSecurityTrustUrl("data:text/json;charset=UTF-8," + encodeURIComponent(JSON.stringify(generatedExport)));
   }
 }
