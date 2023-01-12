@@ -49,7 +49,19 @@ export type GeneratedWorkout = {
   id: number,
   intervals: GeneratedInterval[],
   intervalsSetsCount: number,
+  cycles: number,
   title: string,
+  restBetweenTabatas: number,
+  restBetweenWorkoutsReps: number,
+  restBetweenWorkoutsTime: number,
+  restBpm: number,
+  restReps: number,
+  workBpm: number,
+  workReps: number,
+  coolDown: number,
+  prepare: number,
+  work: number,
+  rest: number,
 }
 
 export type GeneratedExport = {
