@@ -85,7 +85,7 @@
           {{selection.selected.length === exerciseList.length ? "All" : selection.selected.length}} selected
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <app-exercise-list [exercises]="exerciseList" [selection]="selection"></app-exercise-list>
+      <app-exercise-list [dataSource]="dataSource" [selection]="selection"></app-exercise-list>
     </mat-expansion-panel>
   </mat-accordion>
 </form>

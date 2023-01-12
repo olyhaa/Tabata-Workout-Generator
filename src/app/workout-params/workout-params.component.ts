@@ -4,6 +4,7 @@ import { Exercise, WorkoutParams } from '../types';
 import { SelectionModel } from '@angular/cdk/collections';
 import { DEFAULT_NUM_CYCLES, DEFAULT_NUM_SETS, DEFAULT_PREPARE_TIME, DEFAULT_REST_TIME, DEFAULT_WORK_TIME } from '../constants';
 import { GetExercisesService } from '../get-exercises.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-workout-params',
@@ -14,6 +15,9 @@ export class WorkoutParamsComponent implements OnInit {
   @Output() newParamsEvent = new EventEmitter<WorkoutParams>;
   exerciseList: Exercise[] = [];
 
+  dataSource = new MatTableDataSource<Exercise>([]);
+  selection = new SelectionModel<Exercise>(true, []);
+
   workoutForm = new FormGroup({
     title: new FormControl("", [Validators.required]),
     numSets: new FormControl(DEFAULT_NUM_SETS, [Validators.required, Validators.min(0)]),
@@ -23,13 +27,13 @@ export class WorkoutParamsComponent implements OnInit {
     restTime: new FormControl(DEFAULT_REST_TIME, [Validators.required, Validators.min(0)])
   });
 
-  initialSelection = [];
-  selection = new SelectionModel<Exercise>(true, this.initialSelection);
-
   constructor(private exerciseService: GetExercisesService) { }
 
   ngOnInit() {
     this.exerciseList = this.exerciseService.getList();
+    this.dataSource = new MatTableDataSource(this.exerciseList);
+    // select all by default
+    this.dataSource.data.forEach((row: Exercise) => this.selection?.select(row));
   }
 
   getParams() {
