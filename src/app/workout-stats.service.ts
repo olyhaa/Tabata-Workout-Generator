@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { REST_INTERVAL, WORK_INTERVAL } from './constants';
+import { PREPARE_INTERVAL, REST_INTERVAL, WORK_INTERVAL } from './constants';
 import { CombinedInterval, GeneratedInterval, GeneratedWorkout } from './types';
 
 @Injectable({
@@ -10,9 +10,38 @@ export class WorkoutStatsService {
   constructor() { }
 
   getTotalTime(workout: GeneratedWorkout): string {
-    const totalTime = workout.intervals.reduce((result: number, interval: GeneratedInterval) => {
+    let prepareTime = 0;
+    let lastRestTime = 0;
+    const numCycles = workout.intervalsSetsCount;
+    const skipRepeatPrepare = workout.doNotRepeatFirstPrepareAndLastCoolDown;
+    const skipLastRest = workout.skipLastRestInterval;
+
+    const hasFirstPrepare = workout.intervals[0].type === PREPARE_INTERVAL;
+    const hasLastRest = workout.intervals[workout.intervals.length - 1].type === REST_INTERVAL;
+
+    const intervalsToSum = [...workout.intervals];
+
+    // if we are skipping prepare repeats, don't include in summed interval calculations
+    // but include the time in the total count
+    if (skipRepeatPrepare && hasFirstPrepare) {
+      prepareTime = intervalsToSum.shift()?.time || 0;
+      console.log("prepare time = " + prepareTime);
+    }
+
+    // include the last rest in the summed interval calculations
+    // but manually remove the time once
+    if (skipLastRest && hasLastRest) {
+      lastRestTime = workout.intervals[workout.intervals.length - 1].time;
+      console.log("lastRestTime time = " + lastRestTime);
+    }
+
+    const cycleTime = intervalsToSum.reduce((result: number, interval: GeneratedInterval) => {
       return result + interval.time;
     }, 0);
+    console.log("cycleTime time = " + cycleTime);
+
+    const totalTime = cycleTime * numCycles + prepareTime - lastRestTime;
+
     return this.getTime(totalTime);
   }
 

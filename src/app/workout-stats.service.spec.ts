@@ -18,7 +18,7 @@ describe('WorkoutStatsService', () => {
 
   it('should calculate total time', () => {
     const workout: GeneratedWorkout = {
-      doNotRepeatFirstPrepareAndLastCoolDown: false,
+      doNotRepeatFirstPrepareAndLastCoolDown: true,
       isFavorite: false,
       isRestRepsMode: false,
       isWorkRepsMode: false,
@@ -115,7 +115,7 @@ describe('WorkoutStatsService', () => {
 
   it('should calculate total time for multiple cycles', () => {
     const workout: GeneratedWorkout = {
-      doNotRepeatFirstPrepareAndLastCoolDown: false,
+      doNotRepeatFirstPrepareAndLastCoolDown: true,
       isFavorite: false,
       isRestRepsMode: false,
       isWorkRepsMode: false,
