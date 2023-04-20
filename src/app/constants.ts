@@ -1,5 +1,7 @@
 export const GREEN_COLOR = 8;
 
+export const DEFAULT_ID = -1;
+
 export const DEFAULT_NUM_SETS = 8;
 export const DEFAULT_NUM_CYCLES = 3;
 
@@ -46,7 +48,7 @@ export const BASE_WORKOUT_OBJ = {
   skipPrepareAndCoolDownBetweenWorkouts: false,
   colorId: GREEN_COLOR,
   intervals: [],
-  id: -1,
+  id: DEFAULT_ID,
   intervalsSetsCount: DEFAULT_NUM_CYCLES,
   cycles: DEFAULT_NUM_SETS,
   title: "Workout",

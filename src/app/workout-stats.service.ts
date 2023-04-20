@@ -25,20 +25,17 @@ export class WorkoutStatsService {
     // but include the time in the total count
     if (skipRepeatPrepare && hasFirstPrepare) {
       prepareTime = intervalsToSum.shift()?.time || 0;
-      console.log("prepare time = " + prepareTime);
     }
 
     // include the last rest in the summed interval calculations
     // but manually remove the time once
     if (skipLastRest && hasLastRest) {
       lastRestTime = workout.intervals[workout.intervals.length - 1].time;
-      console.log("lastRestTime time = " + lastRestTime);
     }
 
     const cycleTime = intervalsToSum.reduce((result: number, interval: GeneratedInterval) => {
       return result + interval.time;
     }, 0);
-    console.log("cycleTime time = " + cycleTime);
 
     const totalTime = cycleTime * numCycles + prepareTime - lastRestTime;
 
